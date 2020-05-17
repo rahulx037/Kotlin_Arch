@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="handler"
+            type="com.ehomosepian.club.util.CommonEventHandler" />
+
+        <variable
+            name="doctor"
+            type="com.ehomosepian.club.db.entity.DoctorsEntity" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_5"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dp_5"
+        app:cardElevation="@dimen/dp_5">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:id="@+id/property_img_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/dp_10">
+
+                    <ImageView
+                        android:id="@+id/property_img"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_gravity="center"
+                        android:background="@drawable/all_circle_white_bg"
+                        android:padding="2dp"
+                        android:src="@drawable/avtar_image" />
+
+                    <ImageView
+                        android:id="@+id/status_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="right"
+                        android:background="@drawable/status_image"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_done_white_24dp" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/property_img_container"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dp_20">
+
+                    <TextView
+                        android:id="@+id/insured_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:text="@{doctor.category}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_18"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/claim_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:text="@{doctor.firstName}"
+                        android:textSize="@dimen/sp_15" />
+
+                    <TextView
+                        android:id="@+id/claim_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:text="@{doctor.address}"
+                        android:textSize="@dimen/sp_15" />
+
+                    <TextView
+                        android:id="@+id/address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:text="@{doctor.timing}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_15" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header"
+                android:layout_marginTop="@dimen/dp_5"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dp_15"
+                android:paddingTop="@dimen/dp_10"
+                android:weightSum="5">
+
+                <ImageView
+                    android:id="@+id/info"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_info_black_24dp" />
+
+                <ImageView
+                    android:id="@+id/camera_inspection"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_rate_review_black_24dp" />
+
+                <ImageView
+                    android:id="@+id/doc_preview"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_library_books_black_24dp" />
+
+                <ImageView
+                    android:id="@+id/navigation"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_near_me_black_24dp" />
+
+                <ImageView
+                    android:id="@+id/menu"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_more_vert_grey_24dp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

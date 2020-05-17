@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="handler"
+            type="com.ehomosepian.club.util.CommonEventHandler" />
+
+        <variable
+            name="manager"
+            type="androidx.fragment.app.FragmentManager" />
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.services.ServiceFragment">
+
+        <!--<com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:paddingEnd="@dimen/dp_10"
+                android:visibility="gone"
+                android:background="@color/white"
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:paddingStart="@dimen/dp_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:gravity="center"
+                    android:drawableStart="@drawable/ic_sync_green_24dp"
+                    android:text="All Images are synced" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:drawableEnd="@drawable/ic_today_grey_24dp"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:gravity="center"
+                    android:text="06/10/2019" />
+            </RelativeLayout>
+-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                app:tabTextAppearance="@style/tab_text"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                style="@style/MainTabStyle"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/blue_a200"
+                app:tabIndicatorHeight="3dp"
+                app:tabInlineLabel="true"
+                app:tabMode="scrollable" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </LinearLayout>
+        <!--</com.google.android.material.appbar.AppBarLayout>-->
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

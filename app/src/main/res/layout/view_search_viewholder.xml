@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_200"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/search_bg"/>
+
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_14"
+    app:cardElevation="@dimen/dp_6"
+    android:layout_centerInParent="true"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/dp_5"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:padding="@dimen/dp_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:paddingEnd="@dimen/sp_15"
+            android:paddingStart="@dimen/sp_15"
+            android:fontFamily="@font/caviar_dreams"
+            android:text="Find Your Consultation.."
+            android:drawablePadding="@dimen/dp_20"
+            android:drawableEnd="@drawable/ic_search_black_24dp"
+            android:textSize="@dimen/sp_18" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+</RelativeLayout>

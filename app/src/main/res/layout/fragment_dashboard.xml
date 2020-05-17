@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handler"
+            type="com.ehomosepian.club.util.CommonEventHandler" />
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".ui.dashboard.DashboardFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/pharmacy1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:fontFamily="@font/caviar_dreams_bold"
+                    android:text="All your health \ndata at one \nplace."
+                    android:textColor="@color/grey_400"
+                    android:textSize="@dimen/sp_20"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_5"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/dp_5"
+                app:cardElevation="@dimen/dp_5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_5"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/ic_medical_history_on_mobile"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_5"
+                        android:text="Med. History" />
+
+                    <TextView
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/ic_medical_document"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_5"
+                        android:text="Documents" />
+
+
+                    <TextView
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/ic_body_vitals"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_5"
+                        android:text="Body Vitals" />
+
+
+                    <TextView
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/ic_medication"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_5"
+                        android:text="Medications" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/health_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_16" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>
