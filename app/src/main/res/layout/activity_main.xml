@@ -8,7 +8,7 @@
 
         <variable
             name="handler"
-            type="com.ehomosepian.club.util.CommonEventHandler" />
+            type="dragor.international.util.CommonEventHandler" />
     </data>
 
     <RelativeLayout

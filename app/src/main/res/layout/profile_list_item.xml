@@ -7,11 +7,11 @@
 
         <variable
             name="handler"
-            type="com.ehomosepian.club.util.CommonEventHandler" />
+            type="dragor.international.util.CommonEventHandler" />
 
         <variable
             name="category"
-            type="com.ehomosepian.club.api.models.ProfileItem" />
+            type="dragor.international.api.models.ProfileItem" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

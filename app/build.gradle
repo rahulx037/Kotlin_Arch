@@ -7,14 +7,14 @@ apply plugin: 'androidx.navigation.safeargs.kotlin'
 
 allOpen {
     // allows mocking for classes w/o directly opening them for release builds
-    annotation 'com.ehomosepian.club.testing.OpenClass'
+    annotation 'dragor.international.testing.OpenClass'
 }
 
 android {
     compileSdkVersion 29
 
     defaultConfig {
-        applicationId "com.ehomosepian.club"
+        applicationId "dragor.international"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1

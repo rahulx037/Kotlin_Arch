@@ -5,11 +5,11 @@
         <import type="android.view.View" />
         <variable
             name="handler"
-            type="com.ehomosepian.club.util.CommonEventHandler" />
+            type="dragor.international.util.CommonEventHandler" />
 
         <variable
             name="doctor"
-            type="com.ehomosepian.club.db.entity.DoctorsEntity" />
+            type="dragor.international.db.entity.DoctorsEntity" />
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
